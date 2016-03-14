@@ -13,15 +13,14 @@ private: int hours, minutes;
 public: Time(); //Default Constructor
 		Time(int, int); //Overloading constructor
 		~Time(); //Default Destructor
-		void getTime(int, int);
-		void setTime(int, int);
-		void showTime();
-
-		//Declaring overloading method of stream insertion operator to show time
-		friend ostream &operator << (ostream &output, Time &clk);
+		void getTime();
+		void setTime();
+		void showTime(); //May not be needed
 
 		//Overloading the postfix increment operator
 		Time operator++(int);
+
+		friend ostream &operator << (ostream &output, Time &clk);
 };
 
 #endif

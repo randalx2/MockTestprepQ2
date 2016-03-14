@@ -13,12 +13,21 @@
 #include <cmath>
 #include <cstdio>
 
+#include "Time.h"
+
 using namespace std;
 
 int main(){
 
+	Time c = Time(); //create default time object
 
+	//User sets time
+	c.getTime();
+	c.setTime();
 
+	//Show time entered by user
+	cout << c << endl;
+	
 	system("PAUSE");
 	return 0;
 }

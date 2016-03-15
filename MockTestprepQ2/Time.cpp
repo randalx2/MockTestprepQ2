@@ -32,7 +32,7 @@ void Time::getTime(){  //Get time input from user -- accessor
 
 void Time::setTime(){ //Used to check if time was entered in correct input
 
-	if (((hours < 0) && (hours > 24)) && ((minutes < 0) && (minutes > 60)))
+	if (((hours < 0) && (hours > 23)) && ((minutes < 0) && (minutes > 60)))
 	{
 		//reset the time
 		hours = 0;
@@ -61,4 +61,22 @@ Time Time::operator++(int)
 	Time duplicate(*this);
 	minutes++;
 	return duplicate;
+}
+
+Time Time::checkOverflow()
+{
+	
+	if (minutes > 59)
+	{
+		hours++;
+		minutes = 0;
+	}
+
+	if (hours > 23)
+	{
+		hours = 0;
+		minutes = 0;
+	}
+
+	return *this;
 }

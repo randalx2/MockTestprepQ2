@@ -27,6 +27,18 @@ int main(){
 
 	//Show time entered by user
 	cout << c << endl;
+
+	cout << endl;
+	cout << "Now demos of minute increments " << endl;
+
+	//Show incrementing of minutes
+
+	for (int i = 0; i < 120; i++)  //Looping to demonstrate code
+	{
+		c++;
+		c.checkOverflow();
+		cout << c << endl;
+	}
 	
 	system("PAUSE");
 	return 0;

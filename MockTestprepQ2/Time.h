@@ -17,6 +17,8 @@ public: Time(); //Default Constructor
 		void setTime();
 		void showTime(); //May not be needed
 
+		Time checkOverflow(); // Check for minutes overflow
+
 		//Overloading the postfix increment operator
 		Time operator++(int);
 

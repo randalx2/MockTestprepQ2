@@ -42,7 +42,7 @@ void Time::setTime(){ //Used to check if time was entered in correct input
 	}
 }
 
-ostream &operator << (ostream &output, Time &clk) //No need for scope res due to friendship
+ostream &operator << (ostream &output, Time &clk) //No need for scope resolution due to friendship
 {
 	if ((clk.hours < 10) && (clk.minutes < 10))
 	{

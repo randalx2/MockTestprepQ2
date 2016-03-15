@@ -22,7 +22,7 @@ public: Time(); //Default Constructor
 		//Overloading the postfix increment operator
 		Time operator++(int);
 
-		friend ostream &operator << (ostream &output, Time &clk);
+		friend ostream &operator << (ostream &output, Time &clk); //stream insertion operator overload with friendship
 };
 
 #endif
